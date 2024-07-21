@@ -1,0 +1,36 @@
+.transactionTable {
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+.transactionTableHead {
+  color: #fafafa;
+  background-color: #1c1c1c;
+  text-align: center;
+}
+
+.transactionTableHeadСell {
+  width: 100px;
+  padding: 6px 24px;
+  border: 1px solid black;
+}
+
+.transactionTableBody {
+}
+
+.transactionTableValues {
+  background-color: #fafafa;
+}
+
+.transactionTableValues:nth-child(2n) {
+  background-color: lightgrey;
+}
+
+.transactionTableValuesCell {
+  color: black;
+  border: 1px solid black;
+  padding: 6px 24px;
+}
+
+.transactionTableValuesCell:nth-child(2n) {
+}

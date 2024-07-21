@@ -1,18 +1,21 @@
-import React from 'react'
-import clsx from 'clsx';
-import './FriendList.css'
+// import css from './FriendList.module.css'
+import css from "./FriendList.module.css";
 
-const FriendListItem = ({image, name, status}) => {
+const FriendListItem = ({ image, name, isOnline }) => {
   return (
-    <div>
-  <img src={image} alt="Avatar" width="48" />
-          <p>{name}</p>
-      <p className={clsx(
-       status === "Online" ? "isOnline" : "isOffline"
-      )}>
-        {status}</p>
-</div>
-  )
-}
+    <div className={css.friendListItem}>
+      <img
+        className={css.friendListAvatar}
+        src={image}
+        alt="Avatar"
+        width="48"
+      />
+      <p className={css.friendListName}>{name}</p>
+      <p className={`${isOnline ? css.isOnline : css.isOffline}`}>
+        {isOnline ? "Online" : "Offline"}
+      </p>
+    </div>
+  );
+};
 
-export default FriendListItem
+export default FriendListItem;
